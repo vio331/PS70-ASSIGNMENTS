@@ -79,8 +79,6 @@
 </div>
 
 
-
-
 </xmp style="display:none;">>
 </body>
 <!DOCTYPE html>
@@ -106,12 +104,12 @@
             background-color: #ffffff;
             overflow: hidden;
             white-space: nowrap;
-            padding: 50px 0;
+            padding: 20px 0;
         }
 
         .marquee {
             display: inline-block;
-            animation: scroll-left 20s linear infinite;
+            animation: scroll-left 30s linear infinite;
         }
 
         .marquee a {
@@ -124,6 +122,21 @@
 
         .marquee a:hover {
             color: #000000;
+        }
+        
+        .image-container {
+            position: absolute;
+            top: -200px; /* Moves the image above the link */
+            left: 0;
+            width: 200px;
+            height: 150px;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .marquee a:hover .image-container {
+            opacity: 1;
         }
 
         @keyframes scroll-left {
@@ -141,7 +154,7 @@
     <!-- Moving links section -->
     <div class="marquee-container">
         <div class="marquee">
-            <a href="01_intro/index.html" target="_blank">01</a>
+            <a href="01_intro/index.html" target="_blank">01 </a>
             <a href="02_2Ddesign/index.html" target="_blank">02</a>
             <a href="03_fabrication/index.html" target="_blank">03</a>
             <a href="04_microcontroller/index.html" target="_blank">04</a>

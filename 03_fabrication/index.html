@@ -1,84 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PS70: Intro to Digital Fabrication</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0);
-            padding: 10px 0;
-            z-index: 1000;
-        } 
-        
-        .navbar-nav {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-        }
-        .nav-title {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 24px;
-            font-weight: regular;
-        }
-        .nav-link {
-            font-size: 20px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-        .content {
-            padding-top: 30px;
-        }
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+    <link href="../style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Placeholder for the shared template -->
+    <div id="template-container"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm" style="background-color: #000000;">
-        <div class="container-fluid">
-            <div class="navbar-nav">
-                <!-- Left: [+] -->
-                <h2><a class="nav-link" href="./index.html">[+]</a></h2>
+    <!-- Page-specific content -->
+    <div class="content">
+        <h3>Week 3: Hand Tools and Fabrication</h3>
+        <h4>Kinetic Sculpture</h4>
+    </div>
 
-                <!-- Center: Title -->
-                <h2 class="nav-title">PS70 Spring 2025</h2>
-
-                <!-- Right: [About] -->
-                <h2><a class="nav-link" href="./about.html">[About]</a></h2>
-            </div>
-        </div>
-    </nav>
-
-
-<body>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin">   </p>
-
-<h3>Week 3: Hand Tools and Fabrication</h3>
-
-<h4>Kinetic Sculpture</h4>
-
-
-
-
-</div>
-</xmp>
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
+    <!-- JavaScript to load and insert template.html -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('../template.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Template not found.');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('template-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading template:', error);
+                });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

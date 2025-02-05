@@ -8,123 +8,61 @@
     <link href="./style.css" rel="stylesheet">
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        .navbar-nav {
+        .content-wrapper {
+            flex: 1;
             display: flex;
-            width: 100%;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            font-weight: bold;
+            padding: 20px;
         }
 
-        .nav-title {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 24px;
-            font-weight: regular;
-            color: white;
-        }
-
-        .nav-link {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .bottom-bar a {
-            color: white;
-            text-decoration: underline;
-            font-size: 16px;
+        .slideshow-container {
             position: relative;
-            cursor: pointer;
+            width: 100%;
+            max-width: 1000px;
         }
 
-        .bottom-bar a:hover {
-            color: #088080;
-        }
-
-        /* Popup styles */
-        .popup {
+        .slide {
             display: none;
+            width: 100%;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
             position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
             color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            white-space: nowrap;
-            z-index: 1000;
-            width: 300px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .popup img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .popup-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .popup-title {
             font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 18px;
+            transition: 0.3s;
+            user-select: none;
         }
 
-        .popup a.download-icon {
-            margin-top: 5px;
-            color: #ffcc00;
-            font-size: 12px;
-            text-decoration: none;
+        .prev {
+            left: 0;
         }
 
-        .bottom-bar a:hover .popup {
-            display: flex;
+        .next {
+            right: 0;
         }
 
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
     </style>
 </head>
 <body>
@@ -144,151 +82,198 @@
         </div>
     </nav>
 
+    <!-- Centered Content Wrapper with Slideshow -->
+    <div class="content-wrapper">
+        <div class="slideshow-container">
+            <div class="slide">
+                <a href="./01_intro/index.html">
+                    <img src="./01_intro/thumbnail.jpg" alt="Week 1">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./02_2Ddesign/index.html">
+                    <img src="./02_2Ddesign/thumbnail.jpg" alt="Week 2">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./03_fabrication/index.html">
+                    <img src="./03_fabrication/thumbnail.jpg" alt="Week 3">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./04_microcontroller/index.html">
+                    <img src="./04_microcontroller/thumbnail.jpg" alt="Week 4">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./05_3Ddesign/index.html">
+                    <img src="./05_3Ddesign/thumbnail.jpg" alt="Week 5">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./06_inputs/index.html">
+                    <img src="./06_inputs/thumbnail.jpg" alt="Week 6">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./07_outputs/index.html">
+                    <img src="./07_outputs/thumbnail.jpg" alt="Week 7">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./08_cnc/index.html">
+                    <img src="./08_cnc/thumbnail.jpg" alt="Week 8">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./09_networking/index.html">
+                    <img src="./09_networking.jpg" alt="Week 9">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./10_machine/index.html">
+                    <img src="./10_machine/thumbnail.jpg" alt="Week 10">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="./13_finalproject/index.html">
+                    <img src="./13_finalproject/thumbnail.jpg" alt="Week 13">
+                </a>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
     <div class="bottom-bar-container">
         <div class="bottom-bar">
             <a href="./01_intro/index.html">01
                 <div class="popup">
-                    <img src="./01_intro/placeholder.jpg" alt="01 Image">
+                    <img src="./01_intro/popup.png" alt="01 Image">
                     <div class="popup-content">
-                        <span class="popup-title">Introduction</span>
-                        <span>Brief intro to digital fabrication.</span>
-                        <a class="download-icon" href="./01_intro/download.zip" download>Download Files</a>
+                        <span class="popup-title">WEEK 1 _ WEBSITE DESIGN</span>
+                        <span>Designing the website + project idea options.</span>
                     </div>
                 </div>
             </a>
-
             <a href="./02_2Ddesign/index.html">02
                 <div class="popup">
-                    <img src="./02_2Ddesign/placeholder.jpg" alt="02 Image">
+                    <img src="./02_2Ddesign/popup.png" alt="02 Image">
                     <div class="popup-content">
-                        <span class="popup-title">2D Design</span>
+                        <span class="popup-title">WEEK 2 _ 2D DESIGN</span>
                         <span>Learn the basics of 2D design tools.</span>
-                        <a class="download-icon" href="./02_2Ddesign/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./03_fabrication/index.html">03
                 <div class="popup">
-                    <img src="./03_fabrication/placeholder.jpg" alt="03 Image">
+                    <img src="./03_fabrication/popup.png" alt="03 Image">
                     <div class="popup-content">
                         <span class="popup-title">Fabrication</span>
                         <span>Hands-on fabrication techniques.</span>
-                        <a class="download-icon" href="./03_fabrication/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./04_microcontroller/index.html">04
                 <div class="popup">
-                    <img src="./04_microcontroller/placeholder.jpg" alt="04 Image">
+                    <img src="./04_microcontroller/popup.png" alt="04 Image">
                     <div class="popup-content">
                         <span class="popup-title">Microcontrollers</span>
                         <span>Working with microcontroller-based projects.</span>
-                        <a class="download-icon" href="./04_microcontroller/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./05_3Ddesign/index.html">05
                 <div class="popup">
-                    <img src="./05_3Ddesign/placeholder.jpg" alt="05 Image">
+                    <img src="./05_3Ddesign/popup.png" alt="05 Image">
                     <div class="popup-content">
                         <span class="popup-title">3D Design</span>
                         <span>Introduction to 3D modeling concepts.</span>
-                        <a class="download-icon" href="./05_3Ddesign/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./06_inputs/index.html">06
                 <div class="popup">
-                    <img src="./06_inputs/placeholder.jpg" alt="06 Image">
+                    <img src="./06_inputs/popup.png" alt="06 Image">
                     <div class="popup-content">
                         <span class="popup-title">Inputs</span>
                         <span>Exploring input devices in projects.</span>
-                        <a class="download-icon" href="./06_inputs/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./07_outputs/index.html">07
                 <div class="popup">
-                    <img src="./07_outputs/placeholder.jpg" alt="07 Image">
+                    <img src="./07_outputs/popup.png" alt="07 Image">
                     <div class="popup-content">
-                        <span class="popup-title">Outputs</span>
+                        <span class="popup-title">Week 7 _ Outputs</span>
                         <span>Using output devices effectively.</span>
-                        <a class="download-icon" href="./07_outputs/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./08_cnc/index.html">08
                 <div class="popup">
-                    <img src="./08_cnc/placeholder.jpg" alt="08 Image">
+                    <img src="./08_cnc/popup.png" alt="08 Image">
                     <div class="popup-content">
                         <span class="popup-title">CNC</span>
                         <span>Learn about CNC machines and applications.</span>
-                        <a class="download-icon" href="./08_cnc/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./09_networking/index.html">09
                 <div class="popup">
-                    <img src="./09_networking/placeholder.jpg" alt="09 Image">
+                    <img src="./09_networking/popup.png" alt="09 Image">
                     <div class="popup-content">
                         <span class="popup-title">Networking</span>
                         <span>Introduction to networking in projects.</span>
-                        <a class="download-icon" href="./09_networking/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
             <a href="./10_machine/index.html">10
                 <div class="popup">
-                    <img src="./10_machine/placeholder.jpg" alt="10 Image">
+                    <img src="./10_machine/popup.png" alt="10 Image">
                     <div class="popup-content">
                         <span class="popup-title">Machine Building</span>
                         <span>Building custom machines for fabrication.</span>
-                        <a class="download-icon" href="./10_machine/download.zip" download>Download Files</a>
                     </div>
                 </div>
             </a>
-
-            <a href="./11_extra/index.html">11
+            <a href="./13_finalproject/index.html">Final
                 <div class="popup">
-                    <img src="./11_extra/placeholder.jpg" alt="11 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Extra Topic 1</span>
-                        <span>Specialized topics in fabrication.</span>
-                        <a class="download-icon" href="./11_extra/download.zip" download>Download Files</a>
-                    </div>
-                </div>
-            </a>
-
-            <a href="./12_extra/index.html">12
-                <div class="popup">
-                    <img src="./12_extra/placeholder.jpg" alt="12 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Extra Topic 2</span>
-                        <span>Advanced fabrication workflows.</span>
-                        <a class="download-icon" href="./12_extra/download.zip" download>Download Files</a>
-                    </div>
-                </div>
-            </a>
-
-            <a href="./13_finalproject/index.html">13
-                <div class="popup">
-                    <img src="./13_finalproject/placeholder.jpg" alt="13 Image">
+                    <img src="./13_finalproject/popup.png" alt="13 Image">
                     <div class="popup-content">
                         <span class="popup-title">Final Project</span>
-                        <span>Capstone project for the course.</span>
-                        <a class="download-icon" href="./13_finalproject/download.zip" download>Download Files</a>
+                        <span>We will see.</span>
                     </div>
                 </div>
             </a>
         </div>
     </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlideIndex = 0;
+            if (index < 0) currentSlideIndex = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlideIndex ? "block" : "none";
+            });
+        }
+
+        function changeSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        // Initial slide display
+        showSlide(currentSlideIndex);
+
+        // Automatic slideshow (optional)
+        setInterval(() => changeSlide(1), 5000); // Change every 5 seconds
+    </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Bottom Bar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom: 20px; /* Space from the bottom, adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .bottom-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .bottom-bar a:hover {
+            color: #ffcc00;
+        }
+
+        /* Allow dynamic width editing */
+        .bottom-bar-container {
+            max-width: 70%; /* Change this percentage for the desired width */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Feel free to explore the links at the bottom.</p>
+    </div>
+
+    <div class="bottom-bar-container">
+        <div class="bottom-bar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
+</html>

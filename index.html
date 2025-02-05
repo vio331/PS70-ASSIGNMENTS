@@ -13,56 +13,6 @@
             min-height: 100vh;
             margin: 0;
         }
-
-        .content-wrapper {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        .slide {
-            display: none;
-            width: 100%;
-        }
-
-        .slideshow-container img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            user-select: none;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
     </style>
 </head>
 <body>
@@ -274,6 +224,21 @@
 
         // Automatic slideshow (optional)
         setInterval(() => changeSlide(1), 5000); // Change every 5 seconds
+
+        // Dynamic pop-up alignment on hover
+        document.querySelectorAll('.bottom-bar a').forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                const popup = link.querySelector('.popup');
+                const rect = popup.getBoundingClientRect();
+
+                // Check if the pop-up would overflow past the right edge of the screen
+                if (rect.right > window.innerWidth) {
+                    popup.classList.add('right-align');
+                } else {
+                    popup.classList.remove('right-align');
+                }
+            });
+        });
     </script>
 </body>
 </html>

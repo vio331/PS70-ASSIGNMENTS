@@ -17,12 +17,23 @@
             background-color: #000;
         }
 
-        .main-image {
-            width: 50%;
-            max-width: 700px;
+        .slideshow-container {
+            width: 60%;
+            max-width: 800px;
             border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slideshow-image {
+            width: 100%;
+            height: auto;
+            display: none; /* Initially hide all images */
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+
+        .slideshow-image.active {
+            display: block; /* Show the current active image */
         }
     </style>
 </head>
@@ -35,8 +46,37 @@
         </div>
     </div>
 
-    <!-- Main Image -->
-    <img class="main-image" src="./01_intro/thumbnail.jpg" alt="Intro Thumbnail">
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <a href="./01_intro/index.html"><img class="slideshow-image active" src="./01_intro/thumbnail.jpg" alt="Intro Thumbnail"></a>
+        <a href="./02_2Ddesign/index.html"><img class="slideshow-image" src="./02_2Ddesign/thumbnail.jpg" alt="2D Design Thumbnail"></a>
+        <a href="./03_fabrication/index.html"><img class="slideshow-image" src="./03_fabrication/thumbnail.jpg" alt="Fabrication Thumbnail"></a>
+        <a href="./04_microcontroller/index.html"><img class="slideshow-image" src="./04_microcontroller/thumbnail.jpg" alt="Microcontroller Thumbnail"></a>
+        <a href="./05_3Ddesign/index.html"><img class="slideshow-image" src="./05_3Ddesign/thumbnail.jpg" alt="3D Design Thumbnail"></a>
+        <a href="./06_inputs/index.html"><img class="slideshow-image" src="./06_inputs/thumbnail.jpg" alt="Inputs Thumbnail"></a>
+        <a href="./07_outputs/index.html"><img class="slideshow-image" src="./07_outputs/thumbnail.jpg" alt="Outputs Thumbnail"></a>
+        <a href="./08_cnc/index.html"><img class="slideshow-image" src="./08_cnc/thumbnail.jpg" alt="CNC Thumbnail"></a>
+        <a href="./09_networking/index.html"><img class="slideshow-image" src="./09_networking/thumbnail.jpg" alt="Networking Thumbnail"></a>
+        <a href="./10_machine/index.html"><img class="slideshow-image" src="./10_machine/thumbnail.jpg" alt="Machine Thumbnail"></a>
+        <a href="./13_finalproject/index.html"><img class="slideshow-image" src="./13_finalproject/thumbnail.jpg" alt="Final Project Thumbnail"></a>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slideshow-image');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        // Ensure the first image is visible
+        slides[currentIndex].classList.add('active');
+
+        // Start the slideshow
+        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+    </script>
 
     <!-- Fixed Bottom Navigation Bar -->
     <div class="bottom-bar">

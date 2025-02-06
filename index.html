@@ -6,239 +6,69 @@
     <title>PS70: Intro to Digital Fabrication</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid">
-            <div class="navbar-nav">
-                <!-- Left: [+] -->
-                <h2><a class="nav-link" href="./index.html">[+]</a></h2>
-
-                <!-- Center: Title -->
-                <h2 class="nav-title">PS70 Spring 2025</h2>
-
-                <!-- Right: [About] -->
-                <h2><a class="nav-link" href="./about.html">[About]</a></h2>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Centered Content Wrapper with Slideshow -->
-    <div class="content-wrapper">
-        <div class="slideshow-container">
-            <div class="slide">
-                <a href="./01_intro/index.html">
-                    <img src="./01_intro/thumbnail.jpg" alt="Week 1">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./02_2Ddesign/index.html">
-                    <img src="./02_2Ddesign/thumbnail.jpg" alt="Week 2">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./03_fabrication/index.html">
-                    <img src="./03_fabrication/thumbnail.jpg" alt="Week 3">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./04_microcontroller/index.html">
-                    <img src="./04_microcontroller/thumbnail.jpg" alt="Week 4">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./05_3Ddesign/index.html">
-                    <img src="./05_3Ddesign/thumbnail.jpg" alt="Week 5">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./06_inputs/index.html">
-                    <img src="./06_inputs/thumbnail.jpg" alt="Week 6">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./07_outputs/index.html">
-                    <img src="./07_outputs/thumbnail.jpg" alt="Week 7">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./08_cnc/index.html">
-                    <img src="./08_cnc/thumbnail.jpg" alt="Week 8">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./09_networking/index.html">
-                    <img src="./09_networking/thumbnail.jpg" alt="Week 9">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./10_machine/index.html">
-                    <img src="./10_machine/thumbnail.jpg" alt="Week 10">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./13_finalproject/index.html">
-                    <img src="./13_finalproject/thumbnail.jpg" alt="Week 13">
-                </a>
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <!-- Fixed Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="./index.html">[PS70 HOME]</a>
+            <a href="./about.html">[About]</a>
         </div>
     </div>
 
-    <div class="bottom-bar-container">
-        <div class="bottom-bar">
-            <a href="./01_intro/index.html">01
-                <div class="popup">
-                    <img src="./01_intro/popup.png" alt="01 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">WEEK 1 _ WEBSITE DESIGN</span>
-                        <span>Designing the website + project idea options.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./02_2Ddesign/index.html">02
-                <div class="popup">
-                    <img src="./02_2Ddesign/popup.png" alt="02 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">WEEK 2 _ 2D DESIGN</span>
-                        <span>Learn the basics of 2D design tools.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./03_fabrication/index.html">03
-                <div class="popup">
-                    <img src="./03_fabrication/popup.png" alt="03 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Fabrication</span>
-                        <span>Hands-on fabrication techniques.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./04_microcontroller/index.html">04
-                <div class="popup">
-                    <img src="./04_microcontroller/popup.png" alt="04 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Microcontrollers</span>
-                        <span>Working with microcontroller-based projects.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./05_3Ddesign/index.html">05
-                <div class="popup">
-                    <img src="./05_3Ddesign/popup.png" alt="05 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">3D Design</span>
-                        <span>Introduction to 3D modeling concepts.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./06_inputs/index.html">06
-                <div class="popup">
-                    <img src="./06_inputs/popup.png" alt="06 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Inputs</span>
-                        <span>Exploring input devices in projects.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./07_outputs/index.html">07
-                <div class="popup">
-                    <img src="./07_outputs/popup.png" alt="07 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Week 7 _ Outputs</span>
-                        <span>Using output devices effectively.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./08_cnc/index.html">08
-                <div class="popup">
-                    <img src="./08_cnc/popup.png" alt="08 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">CNC</span>
-                        <span>Learn about CNC machines and applications.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./09_networking/index.html">09
-                <div class="popup">
-                    <img src="./09_networking/popup.png" alt="09 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Networking</span>
-                        <span>Introduction to networking in projects.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./10_machine/index.html">10
-                <div class="popup">
-                    <img src="./10_machine/popup.png" alt="10 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Machine Building</span>
-                        <span>Building custom machines for fabrication.</span>
-                    </div>
-                </div>
-            </a>
-            <a href="./13_finalproject/index.html">Final
-                <div class="popup">
-                    <img src="./13_finalproject/popup.png" alt="13 Image">
-                    <div class="popup-content">
-                        <span class="popup-title">Final Project</span>
-                        <span>We will see.</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <!-- Page Content -->
+    <div class="page-container">
+        <h1>Welcome to PS70 Digital Fabrication</h1>
+        <p>
+            This is placeholder content to test the fixed navigation bars.
+            Scroll down to ensure the top and bottom nav bars remain in place while the content scrolls smoothly.
+        </p>
+        
+        <!-- Repeated placeholder content to simulate scrolling -->
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+        <p>Placeholder text to simulate scrolling...</p>
+
     </div>
 
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll(".slide");
-
-        function showSlide(index) {
-            if (index >= slides.length) currentSlideIndex = 0;
-            if (index < 0) currentSlideIndex = slides.length - 1;
-
-            slides.forEach((slide, i) => {
-                slide.style.display = i === currentSlideIndex ? "block" : "none";
-            });
-        }
-
-        function changeSlide(n) {
-            currentSlideIndex += n;
-            showSlide(currentSlideIndex);
-        }
-
-        // Initial slide display
-        showSlide(currentSlideIndex);
-
-        // Automatic slideshow (optional)
-        setInterval(() => changeSlide(1), 5000); // Change every 5 seconds
-
-        // Dynamic pop-up alignment on hover
-        document.querySelectorAll('.bottom-bar a').forEach(link => {
-            link.addEventListener('mouseenter', function () {
-                const popup = link.querySelector('.popup');
-                const rect = popup.getBoundingClientRect();
-
-                // Check if the pop-up would overflow past the right edge of the screen
-                if (rect.right > window.innerWidth) {
-                    popup.classList.add('right-align');
-                } else {
-                    popup.classList.remove('right-align');
-                }
-            });
-        });
-    </script>
+    <!-- Fixed Bottom Navigation Bar -->
+    <div class="bottom-bar">
+        <div class="container">
+            <a href="./01_intro/index.html">[01]</a>
+            <a href="./02_2Ddesign/index.html">[02]</a>
+            <a href="./03_fabrication/index.html">[03]</a>
+            <a href="./04_microcontroller/index.html">[04]</a>
+            <a href="./05_3Ddesign/index.html">[05]</a>
+            <a href="./06_inputs/index.html">[06]</a>
+            <a href="./07_outputs/index.html">[07]</a>
+            <a href="./08_cnc/index.html">[08]</a>
+            <a href="./09_networking/index.html">[09]</a>
+            <a href="./10_machine/index.html">[10]</a>
+            <a href="./13_finalproject/index.html">[Final]</a>
+        </div>
+    </div>
 </body>
 </html>

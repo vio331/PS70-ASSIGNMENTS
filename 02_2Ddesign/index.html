@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 - PS70 Digital Fabrication</title>
     <link href="../style.css" rel="stylesheet">
+    <style>
+        .content-container {
+            display: flex;
+            gap: 20px;
+            min-height: 70vh;
+            align-items: flex-start;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left-column {
+            flex: 0 0 40%;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .right-column {
+            flex: 0 0 60%;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .right-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- Fixed Top Navigation Bar -->
@@ -17,32 +59,77 @@
 
     <!-- Main Content Section -->
     <div class="page-container">
-        <div class="main-content">
-            <!-- Left Section: Placeholder Images -->
-            <div class="image-section">
-                <a href="./example1.jpg" target="_blank">
-                    <img src="./example1.jpg" alt="Example 1" class="linked-image">
-                </a>
-                <a href="./example2.jpg" target="_blank">
-                    <img src="./example2.jpg" alt="Example 2" class="linked-image">
-                </a>
-            </div>
-
-            <!-- Right Section: Content -->
-            <div class="text-section">
-                <h3>Week 2: 2D Design & Cutting</h3>
-                <div class="flexrow">
-                    <a id="btn" href="./follow_along.zip" download>Test Download Button</a>
+        <div class="content-container">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="section">
+                    <h5> + Lab Task</h5>
+                    <p>Description for Section 1. You can edit or add your content here.</p>
                 </div>
 
-                <h4>Assignment 1: Make a Box</h4>
-                <p>Create a simple box design using 2D design principles and cut it using laser cutters or other fabrication tools available.</p>
+                <div class="section">
+                    <h5> + Completed Lab Task</h5>
+                    <p>Description for Section 2. You can edit or add your content here.</p>
+                </div>
 
-                <h4>Assignment 2: Fusion 360 Tutorial</h4>
-                <p>Follow the provided Fusion 360 tutorial to familiarize yourself with parametric design tools.</p>
+                <div class="section">
+                    <h5>+ Week's Assignment</h5>
+                    <p>Description for Section 3. You can edit or add your content here.</p>
+                </div>
 
-                <h4>Assignment 3: Fusion Modeling</h4>
-                <p>Develop a simple model using Fusion 360 and export it for potential fabrication applications.</p>
+                <div class="section">
+                    <h5> + Aim</h5>
+                    <p>Description for Section 4. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <h5> + Steps</h5>
+                    <p>Description for Section 5. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <h3> + Issues</h3>
+                    <p>Description for Section 6. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <h5> + Final Submission</h5>
+                    <p>Description for Section 7. You can edit or add your content here.</p>
+                    <div class="flexrow">
+                        <a id="btn" href="./follow_along.zip" download>Download Materials</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="section">
+                    <p>Description for Section 1 on the right column. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <img src="./completed_lab.jpg" alt="Example Image 1">
+                </div>
+
+                <div class="section">
+                    <p>Description for Section 3 on the right column. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <p>Description for Section 4 on the right column. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <img src="./process.jpg" alt="Example Image 2">
+                </div>
+
+                <div class="section">
+                    <p>Description for Section 6 on the right column. You can edit or add your content here.</p>
+                </div>
+
+                <div class="section">
+                    <img src="./thumbnail.jpg" alt="Example Image 3">
+                </div>
             </div>
         </div>
     </div>
@@ -50,14 +137,14 @@
     <!-- Fixed Bottom Navigation Bar with Pop-ups -->
     <div class="bottom-bar">
         <div class="container">
-            <a href="../01_intro/index.html">[>_<]
+            <a href="../01_intro/index.html">[01]
                 <div class="popup">
                     <img src="../01_intro/popup.png" alt="Popup 01">
                     <div class="popup-title">Intro</div>
                     <div class="popup-body">Description of the week's assignment</div>
                 </div>
             </a>
-            <a href="../02_2Ddesign/index.html">[02]
+            <a href="../02_2Ddesign/index.html">[>_<]
                 <div class="popup">
                     <img src="../02_2Ddesign/popup.png" alt="Popup 02">
                     <div class="popup-title">2D Design</div>

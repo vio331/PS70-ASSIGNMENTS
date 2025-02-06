@@ -17,24 +17,12 @@
             background-color: #000;
         }
 
-        .slideshow-container {
-            width: 60%;
-            max-width: 800px;
-            position: relative;
-            overflow: hidden;
+        .main-image {
+            width: 50%;
+            max-width: 700px;
             border-radius: 10px;
-        }
-
-        .slideshow-image {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .slideshow-image.active {
-            opacity: 1;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -47,37 +35,8 @@
         </div>
     </div>
 
-    <!-- Slideshow Container -->
-    <div class="slideshow-container">
-        <img class="slideshow-image active" src="./01_intro/thumbnail.jpg" alt="Slide 1">
-        <img class="slideshow-image" src="./02_2Ddesign/thumbnail.jpg" alt="Slide 2">
-        <img class="slideshow-image" src="./03_fabrication/thumbnail.jpg" alt="Slide 3">
-        <img class="slideshow-image" src="./04_microcontroller/thumbnail.jpg" alt="Slide 4">
-        <img class="slideshow-image" src="./05_3Ddesign/thumbnail.jpg" alt="Slide 5">
-        <img class="slideshow-image" src="./06_inputs/thumbnail.jpg" alt="Slide 6">
-        <img class="slideshow-image" src="./07_outputs/thumbnail.jpg" alt="Slide 7">
-        <img class="slideshow-image" src="./08_cnc/thumbnail.jpg" alt="Slide 8">
-        <img class="slideshow-image" src="./09_networking/thumbnail.jpg" alt="Slide 9">
-        <img class="slideshow-image" src="./10_machine/thumbnail.jpg" alt="Slide 10">
-        <img class="slideshow-image" src="./13_finalproject/thumbnail.jpg" alt="Slide 11">
-    </div>
-
-    <script>
-        const slides = document.querySelectorAll('.slideshow-image');
-        let currentIndex = 0;
-
-        function showNextSlide() {
-            slides[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % slides.length;
-            slides[currentIndex].classList.add('active');
-        }
-
-        // Ensure the first image is visible
-        slides[currentIndex].classList.add('active');
-
-        // Start the slideshow
-        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
-    </script>
+    <!-- Main Image -->
+    <img class="main-image" src="./01_intro/thumbnail.jpg" alt="Intro Thumbnail">
 
     <!-- Fixed Bottom Navigation Bar -->
     <div class="bottom-bar">

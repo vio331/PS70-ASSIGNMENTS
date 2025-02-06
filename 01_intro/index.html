@@ -17,14 +17,22 @@
         .image-section {
             flex: 1;
             display: flex;
+            flex-direction: column;
+            gap: 20px;
             justify-content: center;
             align-items: center;
         }
 
-        .about-image {
-            max-width: 100%;
+        .linked-image {
+            max-width: 80%;
             height: auto;
             border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .linked-image:hover {
+            transform: scale(1.05);
         }
 
         .text-section {
@@ -49,27 +57,51 @@
     <div class="top-bar">
         <div class="container">
             <a href="../index.html">[PS70 HOME]</a>
-            <a href="./about.html">[About]</a>
+            <a href="../about.html">[About]</a>
         </div>
     </div>
 
     <!-- Main Content Section -->
     <div class="page-container">
         <div class="main-content">
-            <!-- Left Section: Image -->
+            <!-- Left Section: Images -->
             <div class="image-section">
-                <img src="./thumbnail.jpg" alt="Victor's Image" class="about-image">
+                <a href="./idea_1.jpg" target="_blank">
+                    <img src="./idea_1.jpg" alt="Idea 1" class="linked-image">
+                </a>
+                <a href="./idea_2.jpg" target="_blank">
+                    <img src="./idea_2.jpg" alt="Idea 2" class="linked-image">
+                </a>
+                <a href="./idea_3.jpg" target="_blank">
+                    <img src="./idea_3.jpg" alt="Idea 3" class="linked-image">
+                </a>
             </div>
 
             <!-- Right Section: About Text -->
             <div class="text-section">
-                <h3>About me...</h3>
+                <h4>About me...</h4>
                 <p>
                     Hi! My name is Victor Ohene.
                     I am currently a final year Master of Architecture student at the Graduate School of Design.
                 </p>
                 <p>Taking this class expands my use of fab labs past making models and furniture to something more dynamic and fun. A motto I have for myself is: if I can make it, I won’t buy it. So, hopefully, this class will open up what I can make.</p>
                 <p>I'm quiet at times but super friendly and a bit sassy. I love listening to music, playing/watching football (not soccer), and playing board and video games.</p>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h4>Idea_2</h4>
+                <p> second idea</p>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <h4>Idea_2</h4>
+                <p> second idea</p>
             </div>
         </div>
     </div>

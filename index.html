@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PS70: Intro to Digital Fabrication</title>
     <link href="./style.css" rel="stylesheet">
+
+    <style>
+        /* Grid A Styles */
+        #grid-a {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));  /* 6 columns */
+            gap: 10px;
+            padding: 10px 0;  /* 6 columns */
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        /* Grid B Styles */
+        #grid-b {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));  /* 5 columns */
+            gap: 10px;
+            padding: 10px 0;  /* 5 columns */
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .photo-grid a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;  /* Fixed height */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <!-- Fixed Top Navigation Bar -->
@@ -13,17 +56,27 @@
             <a href="./index.html">[>_<]</a>
             <a href="./about.html">[About]</a>
         </div>
-    </div>
-
-    <!-- Page Content -->
+        
     <div class="page-container">
-        <h1>Welcome to PS70 Digital Fabrication</h1>
-        <p>This is placeholder content to test the pop-ups and navigation bar functionality.</p>
+        <!-- Grid A: Odd-Numbered Folders -->
+        <div class="photo-grid" id="grid-a">
+            <a href="./01_intro/index.html"><img src="./01_intro/thumbnail.jpg" alt="Intro"></a>
+            <a href="./03_fabrication/index.html"><img src="./03_fabrication/thumbnail.jpg" alt="Fabrication"></a>
+            <a href="./05_3Ddesign/index.html"><img src="./05_3Ddesign/thumbnail.jpg" alt="3D Design"></a>
+            <a href="./07_outputs/index.html"><img src="./07_outputs/thumbnail.jpg" alt="Outputs"></a>
+            <a href="./09_networking/index.html"><img src="./09_networking/thumbnail.jpg" alt="Networking"></a>
+            <a href="./13_finalproject/index.html"><img src="./13_finalproject/thumbnail.jpg" alt="Final Project"></a>
+        </div>
 
-        <!-- Repeated placeholder content to simulate scrolling -->
-        <p>Placeholder text to simulate scrolling...</p>
-        <p>Placeholder text to simulate scrolling...</p>
-        <p>Placeholder text to simulate scrolling...</p>
+        <!-- Grid B: Even-Numbered Folders -->
+        <div class="photo-grid" id="grid-b">
+            <a href="./02_2Ddesign/index.html"><img src="./02_2Ddesign/thumbnail.jpg" alt="2D Design"></a>
+            <a href="./04_microcontroller/index.html"><img src="./04_microcontroller/thumbnail.jpg" alt="Microcontroller"></a>
+            <a href="./06_inputs/index.html"><img src="./06_inputs/thumbnail.jpg" alt="Inputs"></a>
+            <a href="./08_cnc/index.html"><img src="./08_cnc/thumbnail.jpg" alt="CNC"></a>
+            <a href="./10_machine/index.html"><img src="./10_machine/thumbnail.jpg" alt="Machine"></a>
+        </div>
+    </div>
     </div>
 
     <!-- Fixed Bottom Navigation Bar with Pop-ups -->

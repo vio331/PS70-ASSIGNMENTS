@@ -16,7 +16,8 @@ body {
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-top: 50px;
+  box-sizing: border-box;
 }
 
 /* Fixed Top Bar */

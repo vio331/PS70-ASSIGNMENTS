@@ -81,7 +81,7 @@ body {
 /* Pop-up Styles */
 .popup {
   position: absolute;
-  bottom: 70px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   width: var(--popup-width);

@@ -1,6 +1,7 @@
 :root {
   --nav-spacing: 20px;
   --nav-height: 60px;
+  --popup-width: 150px;
 }
 
 body {
@@ -80,14 +81,35 @@ body {
 /* Pop-up Styles */
 .popup {
   position: absolute;
-  bottom: 70px; /* Position the pop-up above the link */
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
+  width: var(--popup-width);
+  max-height: 400px; /* Set the max height */
+  overflow-y: auto; /* Enable scrolling if content exceeds the max height */
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 8px;
   display: none;
   z-index: 1000;
+  text-align: center;
+}
+
+/* Pop-up Title Style */
+.popup-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+  color: #000;
+  line-height: 1.2;
+}
+
+/* Pop-up Body Text Style */
+.popup-body {
+  font-size: 14px;
+  color: #444;
+  word-wrap: break-word;
 }
 
 .bottom-bar a:hover .popup {
@@ -99,4 +121,6 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 5px;
+  line-height: 1.2;
 }

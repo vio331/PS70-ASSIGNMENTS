@@ -1,126 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<title>PS70: Intro to Digital Fabrication </title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../style.css" rel="stylesheet">
-
-
-<nav class="navbar navbar-expand-sm navbar-dark" style=" color: #EEE7E8;">
-  <div style="align-items: center; justify-content: center;" class="container-fluid">
-    <div class="flexrow">
-      <h2 class="nav-title">PS70 Fall 2024</h2>
-    </div>
-    <div class="navbar-nav">
-      <h4><a class="nav-link" href="../index.html">Home</a></h4>
-      <h4><a class="nav-link" href="../about.html">About</a></h4>
-    </div>
-  </div>
-</nav>
-
-<body>
-<xmp style="display:none;">
-<div class="textcontainer">
-<p class="margin"></p>
-
-<h3>Final Project: [INSERT FINAL PROJECT HERE]</h3>
-
-
-</div>
-</xmp>style="display:none;">>
-</body>
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling links Over Background</title>
+    <title>Week 2 - PS70 Digital Fabrication</title>
+    <link href="../style.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-
+        .content-container {
+            display: flex;
+            gap: 20px;
+            min-height: 70vh;
+            align-items: flex-start;
         }
 
-        .marquee-container {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #ffffff;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 20px 0;
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
         }
 
-        .marquee {
-            display: inline-block;
-            animation: scroll-left 30s linear infinite;
+        .left-column {
+            flex: 0 0 40%;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 8px;
+            text-align: right;
         }
 
-        .marquee a {
-            color: #088080;
-            text-decoration: underline;
-            margin-right: 40px;
-            font-size: 100px;
-            transition: color 0.3s;
+        .right-column {
+            flex: 0 0 60%;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 8px;
         }
 
-        .marquee a:hover {
-            color: #000000;
-        }
-        
-        .image-container {
-            position: absolute;
-            top: -200px; /* Moves the image above the link */
-            left: 0;
-            width: 200px;
-            height: 150px;
-            background-size: cover;
-            opacity: 0;
-            transition: opacity 0.5s ease;
+        .left-column p, .right-column p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            line-height: 1.0;
+            color: #ffffff;
+            margin-top: 0%;
         }
 
-        .marquee a:hover .image-container {
-            opacity: 1;
+        .section {
+            margin-bottom: 20px;
         }
 
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+        h5 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 0%;
+        }
+
+        .right-column img {
+            width: 60%;
+            height: auto;
+            border-radius: 8px;
+            align-items: center;
+            padding-top: 16px;
+            padding-bottom: 16px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Moving links section -->
-    <div class="marquee-container">
-        <div class="marquee">
-            <a href="01_intro/index.html" target="_blank">01 </a>
-            <a href="02_2Ddesign/index.html" target="_blank">02</a>
-            <a href="03_fabrication/index.html" target="_blank">03</a>
-            <a href="04_microcontroller/index.html" target="_blank">04</a>
-            <a href="05_3Ddesign/index.html" target="_blank">05</a>
-            <a href="06_inputs/index.html" target="_blank">06</a>
-            <a href="07_outputs/index.html" target="_blank">07</a>
-            <a href="08_cnc/index.html" target="_blank">08</a>
-            <a href="09_networking/index.html" target="_blank">09</a>
-            <a href="10_machine/index.html" target="_blank">10</a>
-            <a href="13_finalproject/index.html" target="_blank">Final</a>
-
+    <!-- Fixed Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="../index.html">[PS70 HOME]</a>
+            <a href="../about.html">[About]</a>
         </div>
     </div>
 
+    <!-- Main Content Section -->
+    <div class="page-container">
+        <div class="content-container">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="section">
+                    <h5> Week ## Lab Task +</h5>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <h5> Completed Lab Task + </h5>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5>Week ## Assignment + </h5>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5> Aim + </h5>
+                    <p>include connection to final project if any</p>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <h5> Steps +</h5>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h3> Issues + </h3>
+                    <p>What did not go right</p>
+                    <p>How I resolved it - if i did</p>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5> Final Submission + </h5>
+                    <p>Description for Section 7. You can edit or add your content here.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="flexrow">
+                        <a id="btn" href="./follow_along.zip" download>Download Files</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="section">
+                    <p>this slot will include a brief description of the lab Task</p>
+                    <p>this slot will include a brief discription of the lab Task</p>
+                </div>
+
+                <div class="section">
+                    <img src="./completed_lab.jpg" alt="Example Image 1">
+                </div>
+
+                <div class="section">
+                    <p>This weeks assignment was to...............</p>
+                    <p>This weeks assignment was to...............</p>
+                </div>
+
+                <div class="section">
+                    <br>
+                    <p>What I want(ed) do to regarding the assignment is</p>
+                    <p>What I want(ed) do to regarding the assignment is</p>
+                    <p>What I want(ed) do to regarding the assignment is</p>
+                </div>
+
+                <div class="section">
+                    <img src="./process.jpg" alt="Example Image 2">
+                </div>
+
+                <div class="section">
+                    <img src="./issues.jpg">
+                </div>
+
+                <div class="section">
+                    <img src="./thumbnail.jpg" alt="Example Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Bottom Navigation Bar with Pop-ups -->
+    <div class="bottom-bar">
+        <div class="container">
+            <a href="../01_intro/index.html">[01]
+                <div class="popup">
+                    <img src="../01_intro/popup.png" alt="Popup 01">
+                    <div class="popup-title">Intro</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../02_2Ddesign/index.html">[>_<]
+                <div class="popup">
+                    <img src="../02_2Ddesign/popup.png" alt="Popup 02">
+                    <div class="popup-title">2D Design</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../03_fabrication/index.html">[03]
+                <div class="popup">
+                    <img src="../03_fabrication/popup.png" alt="Popup 03">
+                    <div class="popup-title">Fabrication</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../04_microcontroller/index.html">[04]
+                <div class="popup">
+                    <img src="../04_microcontroller/popup.png" alt="Popup 04">
+                    <div class="popup-title">Microcontroller</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../05_3Ddesign/index.html">[05]
+                <div class="popup">
+                    <img src="../05_3Ddesign/popup.png" alt="Popup 05">
+                    <div class="popup-title">3D Design</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../06_inputs/index.html">[06]
+                <div class="popup">
+                    <img src="../06_inputs/popup.png" alt="Popup 06">
+                    <div class="popup-title">Inputs</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../07_outputs/index.html">[07]
+                <div class="popup">
+                    <img src="../07_outputs/popup.png" alt="Popup 07">
+                    <div class="popup-title">Outputs</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../08_cnc/index.html">[08]
+                <div class="popup">
+                    <img src="../08_cnc/popup.png" alt="Popup 08">
+                    <div class="popup-title">CNC</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../09_networking/index.html">[09]
+                <div class="popup">
+                    <img src="../09_networking/popup.png" alt="Popup 09">
+                    <div class="popup-title">Networking</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../10_machine/index.html">[10]
+                <div class="popup">
+                    <img src="../10_machine/popup.png" alt="Popup 10">
+                    <div class="popup-title">Machine</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="../13_finalproject/index.html">[Final]
+                <div class="popup">
+                    <img src="../13_finalproject/popup.png" alt="Popup Final">
+                    <div class="popup-title">Final Project</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
-</html>
-
-<script src="../strapdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
 </html>

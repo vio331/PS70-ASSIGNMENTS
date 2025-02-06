@@ -52,9 +52,9 @@ body {
 /* Fixed Bottom Bar */
 .bottom-bar {
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(0, 0, 0);
   z-index: 1000;
 }
 

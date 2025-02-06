@@ -3,132 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS70: Intro to Digital Fabrication</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About - PS70 Digital Fabrication</title>
     <link href="./style.css" rel="stylesheet">
+    <style>
+        /* About Page-Specific Styles */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            min-height: 70vh;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .text-section {
+            flex: 2;
+            color: #ffffff;
+        }
+
+        .text-section h1 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .text-section p {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #d1d1d1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <!-- Fixed Top Navigation Bar -->
+    <div class="top-bar">
         <div class="container">
-            <div class="navbar-nav">
-                <!-- Left: [+] -->
-                <h2><a class="nav-link" href="./index.html">[+]</a></h2>
-
-                <!-- Center: Title -->
-                <h2 class="nav-title">PS70 Spring 2025</h2>
-
-                <!-- Right: [About] -->
-                <h2><a class="nav-link" href="./about.html">[About]</a></h2>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Centered Content Wrapper with Slideshow -->
-    <div class="content-wrapper">
-        <div class="slideshow-container">
-            <div class="slide">
-                <a href="./01_intro/index.html">
-                    <img src="./01_intro/thumbnail.jpg" alt="Week 1">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./02_2Ddesign/index.html">
-                    <img src="./02_2Ddesign/thumbnail.jpg" alt="Week 2">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./03_fabrication/index.html">
-                    <img src="./03_fabrication/thumbnail.jpg" alt="Week 3">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./04_microcontroller/index.html">
-                    <img src="./04_microcontroller/thumbnail.jpg" alt="Week 4">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./05_3Ddesign/index.html">
-                    <img src="./05_3Ddesign/thumbnail.jpg" alt="Week 5">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./06_inputs/index.html">
-                    <img src="./06_inputs/thumbnail.jpg" alt="Week 6">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./07_outputs/index.html">
-                    <img src="./07_outputs/thumbnail.jpg" alt="Week 7">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./08_cnc/index.html">
-                    <img src="./08_cnc/thumbnail.jpg" alt="Week 8">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./09_networking/index.html">
-                    <img src="./09_networking/thumbnail.jpg" alt="Week 9">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./10_machine/index.html">
-                    <img src="./10_machine/thumbnail.jpg" alt="Week 10">
-                </a>
-            </div>
-            <div class="slide">
-                <a href="./13_finalproject/index.html">
-                    <img src="./13_finalproject/thumbnail.jpg" alt="Week 13">
-                </a>
-            </div>
-
-            <!-- Next and Previous Buttons -->
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <a href="./index.html">[PS70 HOME]</a>
+            <a href="./about.html">[>_<]</a>
         </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="container">
-        <div class="bottom-bar">
-            <a href="./01_intro/index.html">01</a>
-            <a href="./02_2Ddesign/index.html">02</a>
-            <a href="./03_fabrication/index.html">03</a>
-            <a href="./04_microcontroller/index.html">04</a>
-            <a href="./05_3Ddesign/index.html">05</a>
-            <a href="./06_inputs/index.html">06</a>
-            <a href="./07_outputs/index.html">07</a>
-            <a href="./08_cnc/index.html">08</a>
-            <a href="./09_networking/index.html">09</a>
-            <a href="./10_machine/index.html">10</a>
-            <a href="./13_finalproject/index.html">Final</a>
+    <!-- Main Content Section -->
+    <div class="page-container">
+        <div class="main-content">
+            <!-- Left Section: Image -->
+            <div class="image-section">
+                <img src="about-me-update.jpg" alt="Victor's Image" class="about-image">
+            </div>
+
+            <!-- Right Section: About Text -->
+            <div class="text-section">
+              <br>  
+              <br> 
+              <br> 
+              <br> 
+              <br> 
+              <br> 
+              <br> 
+              <br> 
+              <br> 
+              <h3>About me...</h3>
+                <p>
+                    Hi! My name is Victor Ohene.
+                    I am currently a final year Master of Architecture student at the Graduate School of Design.                </p>
+                <p>Taking this class expand my use of fab labs past making models and furniture to something more dynamic and fun. A motto I have for myself is if i can make it, I wont buy it. So hopefully this class will open up what I can make.</p>
+                <p>I'm quiet a bit at times but super friendly and a bit sassy. Love listening to music, playing/watching football(not soccer), playing board and video games.</p>
+                
+            </div>
         </div>
     </div>
 
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll(".slide");
-
-        function showSlide(index) {
-            if (index >= slides.length) currentSlideIndex = 0;
-            if (index < 0) currentSlideIndex = slides.length - 1;
-
-            slides.forEach((slide, i) => {
-                slide.style.display = i === currentSlideIndex ? "block" : "none";
-            });
-        }
-
-        function changeSlide(n) {
-            currentSlideIndex += n;
-            showSlide(currentSlideIndex);
-        }
-
-        // Initial slide display
-        showSlide(currentSlideIndex);
-
-        // Automatic slideshow (optional)
-        setInterval(() => changeSlide(1), 5000);
-    </script>
+    <!-- Fixed Bottom Navigation Bar with Pop-ups -->
+    <div class="bottom-bar">
+        <div class="container">
+            <a href="./01_intro/index.html">[01]
+                <div class="popup">
+                    <img src="./01_intro/popup.png" alt="Popup 01">
+                    <div class="popup-title">Intro</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./02_2Ddesign/index.html">[02]
+                <div class="popup">
+                    <img src="./02_2Ddesign/popup.png" alt="Popup 02">
+                    <div class="popup-title">2D Design</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./03_fabrication/index.html">[03]
+                <div class="popup">
+                    <img src="./03_fabrication/popup.png" alt="Popup 03">
+                    <div class="popup-title">Fabrication</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./04_microcontroller/index.html">[04]
+                <div class="popup">
+                    <img src="./04_microcontroller/popup.png" alt="Popup 04">
+                    <div class="popup-title">Microcontroller</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./05_3Ddesign/index.html">[05]
+                <div class="popup">
+                    <img src="./05_3Ddesign/popup.png" alt="Popup 05">
+                    <div class="popup-title">3D Design</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./06_inputs/index.html">[06]
+                <div class="popup">
+                    <img src="./06_inputs/popup.png" alt="Popup 06">
+                    <div class="popup-title">Inputs</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./07_outputs/index.html">[07]
+                <div class="popup">
+                    <img src="./07_outputs/popup.png" alt="Popup 07">
+                    <div class="popup-title">Outputs</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./08_cnc/index.html">[08]
+                <div class="popup">
+                    <img src="./08_cnc/popup.png" alt="Popup 08">
+                    <div class="popup-title">CNC</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./09_networking/index.html">[09]
+                <div class="popup">
+                    <img src="./09_networking/popup.png" alt="Popup 09">
+                    <div class="popup-title">Networking</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./10_machine/index.html">[10]
+                <div class="popup">
+                    <img src="./10_machine/popup.png" alt="Popup 10">
+                    <div class="popup-title">Machine</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+            <a href="./13_finalproject/index.html">[Final]
+                <div class="popup">
+                    <img src="./13_finalproject/popup.png" alt="Popup Final">
+                    <div class="popup-title">Final Project</div>
+                    <div class="popup-body">Description of the week's assignment</div>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

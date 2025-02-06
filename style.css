@@ -87,7 +87,7 @@ body {
   width: var(--popup-width);
   max-height: 400px; /* Set the max height */
   overflow-y: auto; /* Enable scrolling if content exceeds the max height */
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #088080e6;
   padding: 10px;
   border-radius: 8px;
   display: none;
@@ -101,15 +101,16 @@ body {
   font-weight: bold;
   text-decoration: underline;
   margin-bottom: 5px;
-  color: #000;
-  line-height: 1.2;
+  color: #ffffff;
+  line-height: 1;
 }
 
 /* Pop-up Body Text Style */
 .popup-body {
   font-size: 14px;
-  color: #444;
+  color: #ffffff;
   word-wrap: break-word;
+  line-height: 1;
 }
 
 .bottom-bar a:hover .popup {
@@ -121,6 +122,6 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 5px;
-  line-height: 1.2;
+  margin-bottom: 3px;
+  line-height: 1;
 }

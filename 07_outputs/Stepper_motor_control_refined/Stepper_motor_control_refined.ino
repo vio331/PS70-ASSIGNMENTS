@@ -17,7 +17,7 @@ const int moisturePin = D1;
 // Movement Settings
 const int TOTAL_MOVE_STEPS = 20;    
 const unsigned long CYCLE_DELAY = 10000;    // 10 seconds between movements
-const unsigned long MOVE_DURATION = 10000;  // 10 seconds to complete movement
+const unsigned long MOVE_DURATION = 5000;  // 10 seconds to complete movement
 const unsigned long PAUSE_TIMEOUT = 10000;  // 10 seconds pause between movements
 
 // Speed Settings
